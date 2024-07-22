@@ -32,11 +32,15 @@ public class DaoProducto {
     }
 
     public boolean eliminar(int id){
-        return true;
+        return (cx.delete("producto","id="+id,null))>0;
     }
 
     public boolean editar(Producto p){
-        return true;
+        ContentValues contenedor = new ContentValues();
+        contenedor.put("nombre",p.getNombre());
+        contenedor.put("descripcion",p.getDescripcion());
+        contenedor.put("precio",p.getPrecio());
+        return (cx.update("producto",contenedor,"id="+p.getId(),null))>0;
     }
     public ArrayList<Producto> verTodos(){
         lista.clear();

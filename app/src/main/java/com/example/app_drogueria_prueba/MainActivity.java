@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Dialogo de agregar dialogo.xml
-                Dialog dialogo = new Dialog(MainActivity.this);
+                final Dialog dialogo = new Dialog(MainActivity.this);
                 dialogo.setTitle("Nuevo Registro");
                 dialogo.setCancelable(true);
                 dialogo.setContentView(R.layout.dialogo);
@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 final EditText descripcion = (EditText) dialogo.findViewById(R.id.descripcion);
                 final EditText precio = (EditText) dialogo.findViewById(R.id.precio);
                 Button guardar = (Button)dialogo.findViewById(R.id.d_agregar);
+                guardar.setText("Agregar");
                 Button cancelar = (Button) dialogo.findViewById(R.id.d_cancelar);
                 guardar.setOnClickListener(new View.OnClickListener() {
                     @Override

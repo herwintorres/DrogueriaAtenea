@@ -8,21 +8,30 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:paddingLeft="5dp"
+        android:textSize="16dp"
         android:id="@+id/nombre"
         android:inputType="text"
-        android:hint="Nombre"/>
+        android:hint="Nombre del médicamento"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:paddingLeft="5dp"
+        android:textSize="16dp"
         android:id="@+id/descripcion"
         android:inputType="text"
-        android:hint="Descripcion"/>
+        android:hint="Descripcion del médicameto"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:paddingLeft="5dp"
+        android:textSize="16dp"
         android:id="@+id/precio"
         android:inputType="numberDecimal"
-        android:hint="Precio"/>
+        android:hint="Precio del médicamento"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,7 +39,8 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Agregar"
+            android:background="@color/colorBoton"
+            android:text="Crear producto"
             android:id="@+id/d_agregar"/>
         <Button
             android:layout_width="match_parent"

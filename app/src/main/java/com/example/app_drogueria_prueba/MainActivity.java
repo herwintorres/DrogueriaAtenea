@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
+import androidx.appcompat.widget.Toolbar;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,11 +28,14 @@ public class MainActivity extends AppCompatActivity {
     ProductoAdapter adapter;
     ArrayList<Producto> lista;
     Producto p;
+    private Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+        toolbar = findViewById(R.id.my_toolbar);
+        setSupportActionBar(toolbar);
         dao = new DaoProducto(this);
         lista = dao.verTodos();
         adapter = new ProductoAdapter(this,lista,dao);
